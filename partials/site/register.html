@@ -1,0 +1,42 @@
+<form ng-submit="register()" method="POST">
+	<div class="container">
+		<div class="row mt-4">
+			<div class="col-sm-6 mx-auto">
+
+				<div class="card ">
+					<div class="card-header">
+						<div class="card-title">
+							<h5>Rejestracja</h5>
+						</div>
+					</div>
+					<div class="card-body">
+						<div ng-if="isLogin" class="alert alert-danger">Błędny login lub hasło</div>
+						<div class="form-group">
+							<label>Imię</label>
+								<input type="text" class="form-control" ng-class="{'is-invalid' : errors.name, 'is-valid' : !errors.name && submit}" placeholder="Imię" ng-model="input.name" />
+								<span class="text-danger">{{errors.name}}</span>
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+								<input type="text" class="form-control" ng-class="{'is-invalid' : errors.email, 'is-valid' : !errors.email && submit}" placeholder="Email" ng-model="input.email" />
+								<span class="text-danger">{{errors.email}}</span>
+						</div>
+						<div class="form-group">
+							<label>Hasło</label>
+							<input type="password" class="form-control" ng-class="{'is-invalid' : errors.password, 'is-valid' : !errors.password && submit}" placeholder="Hasło" ng-model="input.password" />
+							<span class="text-danger">{{errors.password}}</span>
+						</div>
+						<div class="form-group">
+							<label>Powtórz hasło</label>
+							<input type="password" class="form-control" ng-class="{'is-invalid' : errors.passconf, 'is-valid' : !errors.passconf && submit}" placeholder="Powtórz hasło" ng-model="input.passconf" />
+							<span class="text-danger">{{errors.passconf}}</span>
+						</div>
+						<div class="form-group">							
+							<button class="btn btn-primary btn-block">Zaloguj</button>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

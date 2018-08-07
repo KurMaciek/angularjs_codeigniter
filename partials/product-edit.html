@@ -1,0 +1,32 @@
+<div class="col-sm-12 mt-3">
+	<form ng-submit="zapiszZmiany()">
+		<div class="row mb-3" >
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label>Nazwa Produktu</label>
+					<input class="form-control" type="text" ng-model="product.nazwa"/>
+				</div>
+				<div class="form-group">
+					<label>Opis Produktu</label>
+					<input class="form-control" type="text" ng-model="product.opis"/>
+				</div>
+				<div class="form-group">
+					<label>Cena Produktu</label>
+					<input class="form-control" type="text" ng-model="product.cena"/>
+				</div>
+			</div>
+		
+			<div class="col-sm-3 mr-2 alert alert-info">
+				{{product.nazwa}}
+				<br/>
+				{{product.opis}}
+				<br/>
+	 			{{product.cena | number: 2}} zł
+	 			<br/>
+	 			
+			</div>
+		</div>
+		<a href="#/admin/products" class="btn btn-outline-primary">Wróć do porduktów</a>
+		<button class="btn btn-outline-success" >Zapisz</button>
+	</form>
+</div>

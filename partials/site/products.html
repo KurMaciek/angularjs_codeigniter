@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<input type="text" placeholder="szukaj..." class="form-control" ng-model="search">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4" ng-repeat="product in products| filter:search">
+			<div class="card card-default">
+				<div class="card-body">
+					<h3><a href="#/product/{{product.id}}">{{product.nazwa}}</a></h3>
+					
+					{{product.opis}}
+					<p>&nbsp;</p>
+					<h4><span class="badge badge-warning text-white float-right">{{product.cena | number:2}} zł/kg</span></h4>
+					<p>&nbsp;</p>
+					<a href="#/product/{{product.id}}" class="btn btn-sm btn-outline-primary">Więcej ...</a>
+					<button ng-click="addToCart(product)" class="btn btn-warning float-right">Do koszyka</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,153 @@
+[
+	{
+		"name": "Forrest",
+		"email": "ipsum.Phasellus@variusNam.co.uk",
+		"role": "user",
+		"password": "Integer"
+	},
+	{
+		"name": "Cally",
+		"email": "tincidunt@Proinvelnisl.co.uk",
+		"role": "user",
+		"password": "ultricies"
+	},
+	{
+		"name": "Forrest",
+		"email": "accumsan.interdum.libero@nequeetnunc.ca",
+		"role": "user",
+		"password": "arcu"
+	},
+	{
+		"name": "Karina",
+		"email": "adipiscing.elit.Curabitur@lacus.ca",
+		"role": "user",
+		"password": "mauris"
+	},
+	{
+		"name": "Malik",
+		"email": "inceptos.hymenaeos@Phasellusdolorelit.com",
+		"role": "user",
+		"password": "eros."
+	},
+	{
+		"name": "Jakeem",
+		"email": "in.faucibus@nisl.com",
+		"role": "user",
+		"password": "sit"
+	},
+	{
+		"name": "Hanae",
+		"email": "nunc@ligulaDonecluctus.co.uk",
+		"role": "user",
+		"password": "ornare,"
+	},
+	{
+		"name": "Maxine",
+		"email": "nec.ligula@fermentumarcuVestibulum.edu",
+		"role": "user",
+		"password": "Cras"
+	},
+	{
+		"name": "Gage",
+		"email": "massa.Quisque@ut.co.uk",
+		"role": "user",
+		"password": "dui,"
+	},
+	{
+		"name": "Alec",
+		"email": "sed.dolor.Fusce@nonegestas.ca",
+		"role": "user",
+		"password": "et"
+	},
+	{
+		"name": "Gay",
+		"email": "justo.faucibus.lectus@rhoncusidmollis.edu",
+		"role": "user",
+		"password": "aliquet,"
+	},
+	{
+		"name": "Emi",
+		"email": "lorem@inceptoshymenaeos.org",
+		"role": "user",
+		"password": "sit"
+	},
+	{
+		"name": "Rhea",
+		"email": "lacus.varius.et@ante.co.uk",
+		"role": "user",
+		"password": "consectetuer"
+	},
+	{
+		"name": "Ima",
+		"email": "vitae.odio@dolor.com",
+		"role": "user",
+		"password": "tristique"
+	},
+	{
+		"name": "Amber",
+		"email": "molestie.sodales@rhoncusidmollis.com",
+		"role": "user",
+		"password": "ut"
+	},
+	{
+		"name": "Rosalyn",
+		"email": "varius.ultrices.mauris@luctussitamet.co.uk",
+		"role": "user",
+		"password": "erat"
+	},
+	{
+		"name": "Ifeoma",
+		"email": "nunc@utcursusluctus.org",
+		"role": "user",
+		"password": "Suspendisse"
+	},
+	{
+		"name": "Zephr",
+		"email": "purus@asollicitudin.co.uk",
+		"role": "user",
+		"password": "odio."
+	},
+	{
+		"name": "Hedwig",
+		"email": "ultricies@dictumeueleifend.org",
+		"role": "user",
+		"password": "ornare,"
+	},
+	{
+		"name": "Alexander",
+		"email": "luctus.vulputate.nisi@velitPellentesqueultricies.org",
+		"role": "user",
+		"password": "Duis"
+	},
+	{
+		"name": "Igor",
+		"email": "fermentum.metus.Aenean@Vivamusnisi.org",
+		"role": "user",
+		"password": "hendrerit"
+	},
+	{
+		"name": "Connor",
+		"email": "Nulla.tempor.augue@odiotristiquepharetra.co.uk",
+		"role": "user",
+		"password": "Phasellus"
+	},
+	{
+		"name": "Stacy",
+		"email": "Ut.tincidunt.orci@pharetrased.ca",
+		"role": "user",
+		"password": "leo,"
+	},
+	{
+		"name": "Adam",
+		"email": "Mauris.magna@varius.edu",
+		"role": "user",
+		"password": "feugiat"
+	},
+	{
+		"name": "Erasmus",
+		"email": "Praesent.luctus@molestie.net",
+		"role": "user",
+		"password": "Aliquam"
+	}
+	
+]

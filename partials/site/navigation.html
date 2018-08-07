@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">
+		<span class="glyphicon glyphicon-shopping-cart"></span>ngShop
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li ng-class="{active : isActive( '/home') }">
+				<a class="nav-link" href="#/home">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li ng-class="{active : isActive( '/products' )}">
+				<a class="nav-link" href="#/products">Produkty</a>
+			</li>
+			<li ng-class="{active: isActive('/cart')}">
+				
+				<a ng-if="labelCart() > 0" class="nav-link" href="#/cart">
+					Koszyk &nbsp; 
+					<span class="badge badge-warning text-white">{{labelCart()}}</span>
+				</a>
+			</li>
+			<li ng-class="{active : isActive('/orders')}">
+				<a class="nav-link" href="#/orders">Zamówienia</a>
+			</li>
+			
+		</ul>
+		<ul class="navbar-nav float-right">
+			<li ng-class="{active : isActive('/login')}">
+				<a class="nav-link" href="#/login">Logowanie</a>
+			</li>
+			<li ng-class="{active : isActive('/register')}">
+				<a class="nav-link" href="#/register">Rejestracja</a>
+			</li>
+			<li ng-class="{active: isActive('/admin')}">
+				<a href="#/admin/products" class="nav-link">Admin</a>
+			</li>
+		</ul>
+	</div>
+</nav>

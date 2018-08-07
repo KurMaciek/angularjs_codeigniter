@@ -1,0 +1,33 @@
+<div class="col-sm-12 mt-3">
+	<form ng-submit="product_create(product)">
+		<div class="row mt-3 mb-3" >
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label>Nazwa Produktu</label>
+					<input class="form-control" type="text" ng-model="product.nazwa"/>
+				</div>
+				<div class="form-group">
+					<label>Opis Produktu</label>
+					<input class="form-control" type="text" ng-model="product.opis"/>
+				</div>
+				<div class="form-group">
+					<label>Cena Produktu</label>
+					<input class="form-control" type="text" ng-model="product.cena"/>
+				</div>
+			</div>
+		
+			<div class="col-sm-3 mr-2 alert alert-info">
+				{{product.nazwa}}
+				<br/>
+				{{product.opis}}
+				<br/>
+	 			{{product.cena | number: 2}} zł
+	 			<br/>
+	 			
+			</div>
+		</div>
+		<a href="#/admin/products" class="btn btn-default">Wróć do porduktów</a>
+		<button ng-if="!success" class="btn btn-outline-success" >Dodaj</button>
+		<button ng-if="success" class="btn btn-success" disabled>Dodano</button>
+	</form>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">	
+	<div class="row">
+		<div class="col-sm-12">
+			
+			<table class="table" >
+				<thead>
+					<tr>
+						<th>Imię</th>
+						<th>Email</th>
+						<th>Koszyk</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="order in orders">
+						<td>{{order.name}}</td>
+						<td>{{order.email}}</td>
+						<td>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Produkt</th>
+										<th>Cena</th>
+										<th>Waga</th>
+										<th>Ilość</th>
+										<th>Suma</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="item in order.items">
+										<td>{{item.name}}</td>
+										<td>{{item.price}}</td>
+										<td>{{item.weight}}</td>
+										<td>{{item.qty}}</td>
+										<td>{{item.price * item.qty | number : 2}} zł</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<h4><span ng-if="order.status == 0" class="badge badge-xl badge-warning text-white">Oczekuje</span></h4>
+							<h4><span ng-if="order.status == 1" class="badge badge-xl badge-success text-white">Wysłano</span></h4>
+							
+						</td>						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

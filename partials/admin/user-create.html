@@ -1,0 +1,41 @@
+<div class="container">
+	<form ng-submit="userCreate(user)">
+		<div ng-if="error" class="row mt-3">
+			<div class="col-sm-12">
+				<div class="alert alert-danger" ng-if="!success">
+					<p>{{errorName}}</p>
+					<p>{{errorEmail}}</p>
+					<p>{{errorPassword}}</p>
+					<p>{{errorPassconf}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="form-group" >
+			<label>Nazwa uzytkownika:</label>
+			<input type="text" ng-init="user.name=''" ng-class="{'is-invalid': errorName}" class="form-control" ng-model="user.name">
+			<span ng-show="errorName" class="text-danger">Polę imię jest wymagane</span>
+		</div>
+		<div class="form-group">
+			<label>Email:</label>
+			<input type="text" ng-init="user.email=''" class="form-control" ng-model="user.email">
+		</div>
+		<div class="form-group">
+			<label>Hasło: </label>
+			<input type="password" ng-init="user.password=''" class="form-control" ng-model="user.password">
+		</div>
+		<div class="form-group">
+			<label>Hasło powtórz: </label>
+			<input type="password" ng-init="user.passconf=''" class="form-control" ng-model="user.passconf">
+		</div>
+		<div class="form-group">
+			<label>Rola:</label>
+			<select class="form-control" ng-model="user.role">
+				<option value="admin">admin</option>
+				<option value="user">user</option>
+			</select>
+		</div>
+		<a href="#/admin/users" class="btn btn-outline-primary">Wróć</a>
+		<button ng-if="!success" class="btn btn-outline-success">Dodaj użytkownika</button>
+		<button ng-if="success" class="btn btn-outline-success" disabled>Dodano</button>
+	</form>
+</div>

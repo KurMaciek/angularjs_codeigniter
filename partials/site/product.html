@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row mt-3">
+		<div class="col-sm-12">
+			<div class="card">
+				<div class="card-body">
+					<h2>{{product.nazwa}}</h2>
+					{{product.opis}}
+					<p></p>
+					<div class="col-sm-6" ng-repeat="image in images" >		
+		 				<img class="img-thumbnail" ng-src="files/{{id}}/{{image}}" alt=""/>
+
+		 			</div>
+					<a href="#/products" class="btn btn-outline-primary">Powrót</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

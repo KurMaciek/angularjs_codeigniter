@@ -1,0 +1,51 @@
+<form name="myForm" ng-submit="setOrder($event)" method="POST" action="https://www.paypal.com/cgi-bin/websc">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Koszyk</h1>
+				<div ng-if="alert" class="alert alert-{{alert.type}}">{{alert.msg}}</div>
+				<div ng-if="!cart.length && alert.type != 'success' " class="alert alert-info">
+					Koszyk jest pusty
+				</div>
+				<div ng-if="cart.length">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Nazwa</th>
+								<th>Ilość</th>
+								<th>Cena</th>
+								<th>Razem</th>
+								<th>Usuń</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="item in cart">
+								<td>{{item.nazwa}}</td>
+								<td>									
+									<div class="form-group has-success" >
+										<input name="input{{$index}}" class="form-control" ng-class="{ 'is-invalid' : myForm.input{{$index}}.$error.required || myForm.input{{$index}}.$error.min || myForm.input{{$index}}.$error.max || myForm.input{{$index}}.$error.number}" type="number" min="0" max="20" ng-model="item.qty">
+										<span class="text-danger" ng-show="myForm.input{{$index}}.$error.required">Podaj ilość</span>
+										<span class="text-danger" ng-show="myForm.input{{$index}}.$error.number">Tylko cyfry</span>
+										<span class="text-danger" ng-show="myForm.input{{$index}}.$error.max">Nie mamy tyle...</span>
+										<span class="text-danger" ng-show="myForm.input{{$index}}.$error.min">Tylko wartości dodatnie</span>
+										<div class="form-group has-success">
+									</div>
+									
+								</td>
+								<td>{{item.cena | number:2}} zł</td>
+								<td><strong>{{item.cena * item.qty | number:2}} zł</strong></td>
+								<td><button class="btn btn-sm btn-danger" ng-click="removeItem($index)">&times;</button></td>
+							</tr>
+							<tr>
+								<td colspan="3"></td>
+								<td><strong>{{totalPrice() | number : 2}} zł</strong></td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="#/products" ng-click="emptyCart()" class="btn btn-danger">Wyczyść koszyk</a>
+					<button class="btn btn-success float-right" type="submit" ng-disabled="!myForm.$valid">Zamów i zapłać</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

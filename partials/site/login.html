@@ -1,0 +1,30 @@
+<form ng-submit="login()" method="POST">
+	<div class="container">
+		<div class="row mt-4">
+			<div class="col-sm-6 mx-auto">
+
+				<div class="card ">
+					<div class="card-header">
+						<div class="card-title">
+							<h5>Logowanie</h5>
+						</div>
+					</div>
+					<div class="card-body">
+						<div ng-if="isLogin" class="alert alert-danger">Błędny login lub hasło</div>
+						<div class="form-group">
+							<label>Email</label>
+								<input type="text" class="form-control" ng-class="{'is-invalid' : isLogin}" placeholder="Email" ng-model="input.name" />
+						</div>
+						<div class="form-group">
+							<label>Hasło</label>
+							<input type="password" class="form-control" ng-class="{'is-invalid' : isLogin}" placeholder="Hasło" ng-model="input.password" />
+						</div>
+						<div class="form-group">							
+							<button class="btn btn-primary btn-block">Zaloguj</button>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

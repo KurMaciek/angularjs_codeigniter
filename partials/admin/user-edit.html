@@ -1,0 +1,45 @@
+<div class="container">
+	<form ng-submit="saveChanges(user)">
+		<div ng-if="error" class="row mt-3">
+			<div class="col-sm-12">
+				<div class="alert alert-danger">
+					<p>{{errorName}}</p>
+					<p>{{errorEmail}}</p>
+					<p>{{errorPassword}}</p>
+					<p>{{errorPassconf}}</p>
+				</div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label>Nazwa użytkownika:</label>
+					<input type="text" class="form-control" ng-model="user.name"/>
+				</div>
+				<div class="form-group">
+					<label>Email:</label>
+					<input type="text" class="form-control" ng-model="user.email">
+				</div>
+				<div class="form-group">
+					<label>Hasło: </label>
+					<input type="password" value="" class="form-control" ng-model="user.password">
+				</div>
+				<div class="form-group">
+					<label>Hasło powtórz: </label>
+					<input type="password" value="" class="form-control" ng-model="user.passconf">
+				</div>				
+				<div class="form-group">
+					<label>Rola:</label>
+					<select class="form-control" ng-model="user.role">
+						<option value="admin">admin</option>
+						<option value="user">user</option>
+					</select>
+				</div>
+				<a href="#/admin/users" class="btn btn-outline-primary">Wróć do listy</a>
+				<button ng-if="!success" class="btn btn-outline-success">Zapisz zmiany</button>
+				<button ng-if="success" class="btn btn-success" disabled>Zapisujemy</button>
+
+			</div>
+		</div>
+	</form>
+</div>

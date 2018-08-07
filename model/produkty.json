@@ -1,0 +1,48 @@
+[
+	{
+		"nazwa":"Mandarynki", 
+		"opis":" Smaczne, ale zagraniczne",
+		"cena": 10.67
+	}, 
+	{
+		"nazwa":"Jabłko",
+		"opis": "Pyszne, Polskie",
+		"cena": 4.11
+	},
+	{
+		"nazwa":"Kiwi", 
+		"opis":"Słodkie",
+		"cena": 4.23
+	},
+	{
+		"nazwa":"Pomarańcz", 
+		"opis":"Z Hiszpanii",
+		"cena": 3.23
+	},
+	{
+		"nazwa":"Banan", 
+		"opis":"Idealnie żółte",
+		"cena": 2.23
+	},
+	{
+		"nazwa":"Truskawki", 
+		"opis":"Z ogórdka ",
+		"cena": 4.43
+	},
+	{
+		"nazwa":"Jagody", 
+		"opis":"Dzisiaj zbierane",
+		"cena": 15.65
+	},
+	{
+		"nazwa":"Maliny", 
+		"opis":"Prosto z lasu",
+		"cena": 12.22
+	},
+	{
+		"nazwa":"Awokado", 
+		"opis":"Pyszne",
+		"cena": 6.76
+	}
+
+]
